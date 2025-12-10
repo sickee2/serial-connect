@@ -37,7 +37,7 @@ LDFLAGS = \
 # 根据操作系统设置链接选项
 ifeq ($(UNAME_S), MINGW64_NT-10.0-26100)
 	CXXFLAGS += $(WIN32_FTXUI_INC)
-  LDFLAGS += -lsetupapi -lCfgMgr32 -l:libftxui-component.a -l:libftxui-dom.a -l:libftxui-screen.a -static $(WIN32_LD_DIR)
+	LDFLAGS += -lsetupapi -lCfgMgr32 -l:libftxui-component.a -l:libftxui-dom.a -l:libftxui-screen.a -static $(WIN32_LD_DIR)
 else
   LDFLAGS += -lftxui-component -lftxui-dom -lftxui-screen
 endif
